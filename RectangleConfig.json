@@ -3,17 +3,17 @@
     "almostMaximizeWidth" : {
       "float" : 0
     },
-    "curtainChangeSize" : {
-      "int" : 0
-    },
-    "allowAnyShortcut" : {
-      "bool" : false
-    },
     "centerHalfCycles" : {
       "int" : 0
     },
     "ignoredSnapAreas" : {
       "int" : 0
+    },
+    "curtainChangeSize" : {
+      "int" : 0
+    },
+    "allowAnyShortcut" : {
+      "bool" : false
     },
     "screenEdgeGapBottom" : {
       "float" : 0
@@ -33,29 +33,29 @@
     "gapSize" : {
       "float" : 0
     },
-    "disabledApps" : {
-
-    },
     "specifiedHeight" : {
       "float" : 1050
     },
-    "todoApplication" : {
+    "disabledApps" : {
 
     },
-    "fullIgnoreBundleIds" : {
+    "todoApplication" : {
 
     },
     "SUEnableAutomaticChecks" : {
       "bool" : true
     },
-    "centeredDirectionalMove" : {
-      "int" : 0
+    "fullIgnoreBundleIds" : {
+
     },
     "unsnapRestore" : {
       "int" : 0
     },
-    "applyGapsToMaximize" : {
+    "centeredDirectionalMove" : {
       "int" : 0
+    },
+    "snapEdgeMarginTop" : {
+      "float" : 5
     },
     "autoMaximize" : {
       "int" : 0
@@ -63,8 +63,8 @@
     "snapModifiers" : {
       "int" : 0
     },
-    "snapEdgeMarginTop" : {
-      "float" : 5
+    "applyGapsToMaximize" : {
+      "int" : 0
     },
     "altThirdCycle" : {
       "int" : 0
@@ -90,29 +90,29 @@
     "footprintFade" : {
       "int" : 0
     },
-    "snapEdgeMarginBottom" : {
-      "float" : 5
-    },
     "specifiedWidth" : {
       "float" : 1680
     },
-    "screenEdgeGapRight" : {
-      "float" : 0
+    "snapEdgeMarginBottom" : {
+      "float" : 5
     },
-    "screenEdgeGapLeft" : {
+    "screenEdgeGapRight" : {
       "float" : 0
     },
     "notifiedOfProblemApps" : {
       "bool" : false
     },
-    "showAllActionsInMenu" : {
-      "int" : 0
+    "screenEdgeGapLeft" : {
+      "float" : 0
     },
     "alternateDefaultShortcuts" : {
       "bool" : true
     },
     "subsequentExecutionMode" : {
       "int" : 1
+    },
+    "showAllActionsInMenu" : {
+      "int" : 0
     },
     "footprintBorderWidth" : {
       "float" : 2
@@ -123,17 +123,17 @@
     "windowSnapping" : {
       "int" : 0
     },
-    "todo" : {
-      "int" : 2
-    },
     "snapEdgeMarginLeft" : {
       "float" : 5
     },
-    "snapEdgeMarginRight" : {
-      "float" : 5
+    "todo" : {
+      "int" : 2
     },
     "obtainWindowOnClick" : {
       "int" : 0
+    },
+    "snapEdgeMarginRight" : {
+      "float" : 5
     },
     "footprintAlpha" : {
       "float" : 0.30000001192092896
@@ -141,11 +141,11 @@
     "minimumWindowWidth" : {
       "float" : 0
     },
-    "attemptMatchOnNextPrevDisplay" : {
-      "int" : 0
-    },
     "footprintColor" : {
 
+    },
+    "attemptMatchOnNextPrevDisplay" : {
+      "int" : 0
     },
     "almostMaximizeHeight" : {
       "float" : 0
@@ -214,40 +214,40 @@
       "keyCode" : 38,
       "modifierFlags" : 786432
     },
-    "centerThird" : {
-      "keyCode" : 3,
-      "modifierFlags" : 786432
-    },
-    "firstTwoThirds" : {
-      "keyCode" : 14,
-      "modifierFlags" : 786432
-    },
-    "firstThreeFourths" : {
-      "keyCode" : 23,
-      "modifierFlags" : 786432
-    },
-    "nextDisplay" : {
-      "keyCode" : 124,
-      "modifierFlags" : 1835008
-    },
-    "thirdFourth" : {
-      "keyCode" : 20,
-      "modifierFlags" : 786432
-    },
-    "topHalf" : {
-      "keyCode" : 126,
+    "smaller" : {
+      "keyCode" : 27,
       "modifierFlags" : 786432
     },
     "bottomRight" : {
       "keyCode" : 40,
       "modifierFlags" : 786432
     },
-    "smaller" : {
-      "keyCode" : 27,
+    "firstTwoThirds" : {
+      "keyCode" : 14,
+      "modifierFlags" : 786432
+    },
+    "thirdFourth" : {
+      "keyCode" : 20,
+      "modifierFlags" : 786432
+    },
+    "nextDisplay" : {
+      "keyCode" : 124,
+      "modifierFlags" : 1835008
+    },
+    "centerThird" : {
+      "keyCode" : 3,
+      "modifierFlags" : 786432
+    },
+    "topHalf" : {
+      "keyCode" : 126,
       "modifierFlags" : 786432
     },
     "center" : {
       "keyCode" : 8,
+      "modifierFlags" : 786432
+    },
+    "firstThreeFourths" : {
+      "keyCode" : 23,
       "modifierFlags" : 786432
     },
     "firstThird" : {
