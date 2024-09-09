@@ -1,9 +1,18 @@
+# Author: Zao Soula
+# Version: 1.0.0
+# Description: Install utils and apps on a new Mac to get started with development
+
+# 
+# Utils
+# 
+
+# Conditional sudo
 SUDO=''
 if (( $EUID != 0 )); then
     SUDO='sudo'
 fi
 
-
+# Install brew formula if not installed
 function install_brew_formula() {
   formulaName=$1
   formulaInfo="$(brew info --json=v2 "$formulaName")"
@@ -19,6 +28,7 @@ function install_brew_formula() {
   fi
 }
 
+# Install brew cask if not installed
 function install_brew_cask() {
   caskName=$1
   caskInfo="$(brew info --json=v2 "homebrew/cask/$caskName")"
@@ -34,6 +44,7 @@ function install_brew_cask() {
   fi
 }
 
+# Start brew service if not started
 function start_brew_service() {
   serviceName=$1
   serviceInfo=$(brew services info $serviceName --json)
@@ -47,6 +58,9 @@ function start_brew_service() {
   fi
 }
 
+#
+# Process
+#
 echo "Installing/updating Homebrew (https://github.com/Homebrew/brew) ..."
 which -s brew
 if [[ $? != 0 ]] ; then
@@ -55,19 +69,24 @@ else
   brew update
 fi
 
+# Install jq needed for parsing json
 brew install jq -q
 
 install_brew_formula asimov
-install_brew_formula topgrade
-
-echo "Copying topgrade config..."
-cp ./topgrade.toml ${XDG_CONFIG_HOME:-~/.config}/topgrade.toml
 
 install_brew_formula git
+
 install_brew_formula nvm
-install_brew_formula pnpm
+
+# install_brew_formula pnpm
+
 install_brew_formula wget
+
 install_brew_formula temurin
+
+install_brew_formula topgrade
+echo "Copying topgrade config..."
+cp ./topgrade.toml ${XDG_CONFIG_HOME:-~/.config}/topgrade.toml
 
 
 install_brew_cask rectangle
@@ -78,21 +97,52 @@ then
 fi
 
 install_brew_cask notion
-install_brew_cask raycast
-install_brew_cask github
-install_brew_cask brave-browser
-install_brew_cask 1password
-install_brew_cask spotify
-install_brew_cask visual-studio-code
-install_brew_cask discord
-install_brew_cask readdle-spark
-install_brew_cask figma
-install_brew_cask postman
-install_brew_cask docker
-install_brew_cask cyberduck
-install_brew_cask cakebrew
 
+install_brew_cask raycast
+
+install_brew_cask github
+
+install_brew_cask brave-browser
+
+install_brew_cask 1password
+
+install_brew_cask spotify
+
+install_brew_cask visual-studio-code
+
+install_brew_cask discord
+
+install_brew_cask readdle-spark
+
+install_brew_cask figma
+
+install_brew_cask postman
+
+install_brew_cask docker
+
+install_brew_cask cyberduck
+
+install_brew_cask adobe-creative-cloud
+
+install_brew_cask google-drive
+
+install_brew_cask messenger
+install_brew_cask tor-browser
+install_brew_cask mongo-compass
+install_brew_cask tailscale
+install_brew_cask sloth
+install_brew_cask warp
+#
+#  Install fonts
+#
+brew tap homebrew/cask-fonts
+
+
+# Show hidden files in Finder
 defaults write com.apple.Finder AppleShowAllFiles true
+
+# Install rosatta
+softwareupdate --install-rosetta
 
 echo "Activating asimov service..."
 $SUDO bash -c "$(declare -f start_brew_service); start_brew_service asimov"
